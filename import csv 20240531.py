@@ -20,7 +20,7 @@ with open('listadoRutEmpresa.csv', 'r', newline='') as archivo_csv:
         }
         listaempresas.append(dictempresa)
 with open('contribuyentes.json', 'w') as archivo:
-    json.dump(listaempresas, archivo)
+    json.dump(listaempresas, archivo, indent=4)
 with open('contribuyentes.json', 'r') as archivo1:
     datos_leidos = json.load(archivo1)
     for datos in datos_leidos:
